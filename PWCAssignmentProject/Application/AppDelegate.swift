@@ -6,17 +6,53 @@
 //
 
 import UIKit
+import NetworkKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
+    let reachability = try! Reachability()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        addReachabilityObserver()
+        
+        window = UIWindow()
+        window?.backgroundColor = .white
+        window?.rootViewController = ListingRouter.createModule()
+        window?.makeKeyAndVisible()
+        
         return true
     }
-
+    
+    //MARK:- Internet Connectivity
+       
+       func addReachabilityObserver(){
+           reachability.whenReachable = { reachability in
+               if reachability.connection == .wifi {
+                   print("Reachable via WiFi")
+               } else {
+                   print("Reachable via Cellular")
+               }
+           }
+           reachability.whenUnreachable = { _ in
+               print("Not reachable")
+           }
+           
+           NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
+           do {
+               try reachability.startNotifier()
+           } catch {
+               print("Unable to start notifier")
+           }
+       }
+    
+    @objc func reachabilityChanged(note: Notification) {
+           
+           let reachability = note.object as! Reachability
+        PWCAssignmentProjectGeneralElements.shared.internetConnectivity = reachability.connection
+       }
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

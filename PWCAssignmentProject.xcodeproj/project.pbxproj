@@ -7,18 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		241DC69947EE0B3A8C46A5E7 /* Pods_PWCAssignmentProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E85F59776B2A364F630E4C7 /* Pods_PWCAssignmentProject.framework */; };
+		8088E12A55EE7F1B9F6EBFC1 /* Pods_PWCAssignmentProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB614BB216D913CB95408E9 /* Pods_PWCAssignmentProjectTests.framework */; };
+		9B1C4F580DE594D854CEE448 /* Pods_PWCAssignmentProject_PWCAssignmentProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A963A52257C57D8761C13FD8 /* Pods_PWCAssignmentProject_PWCAssignmentProjectUITests.framework */; };
+		F46A4A192ACF54E2003E59A9 /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F46A4A162ACF54BD003E59A9 /* NetworkKit.framework */; };
+		F46A4A1A2ACF54E2003E59A9 /* NetworkKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F46A4A162ACF54BD003E59A9 /* NetworkKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F481F0BE2ACEC3F300BD4BDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481F0BD2ACEC3F300BD4BDA /* AppDelegate.swift */; };
 		F481F0C02ACEC3F300BD4BDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481F0BF2ACEC3F300BD4BDA /* SceneDelegate.swift */; };
-		F481F0C22ACEC3F300BD4BDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481F0C12ACEC3F300BD4BDA /* ViewController.swift */; };
 		F481F0C52ACEC3F300BD4BDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F481F0C32ACEC3F300BD4BDA /* Main.storyboard */; };
 		F481F0C72ACEC3F500BD4BDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F481F0C62ACEC3F500BD4BDA /* Assets.xcassets */; };
 		F481F0CA2ACEC3F500BD4BDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F481F0C82ACEC3F500BD4BDA /* LaunchScreen.storyboard */; };
 		F481F0D52ACEC3F500BD4BDA /* PWCAssignmentProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481F0D42ACEC3F500BD4BDA /* PWCAssignmentProjectTests.swift */; };
 		F481F0DF2ACEC3F500BD4BDA /* PWCAssignmentProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481F0DE2ACEC3F500BD4BDA /* PWCAssignmentProjectUITests.swift */; };
 		F481F0E12ACEC3F500BD4BDA /* PWCAssignmentProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481F0E02ACEC3F500BD4BDA /* PWCAssignmentProjectUITestsLaunchTests.swift */; };
+		F481F0F22ACEC47E00BD4BDA /* UniversityListingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481F0F12ACEC47E00BD4BDA /* UniversityListingVC.swift */; };
+		F481F0F42ACEC49E00BD4BDA /* UniversityListingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481F0F32ACEC49E00BD4BDA /* UniversityListingPresenter.swift */; };
+		F481F0FC2ACEC6FD00BD4BDA /* UniversityListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481F0FB2ACEC6FD00BD4BDA /* UniversityListingTableViewCell.swift */; };
+		F481F0FF2ACEC75B00BD4BDA /* ProtocolContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481F0FE2ACEC75B00BD4BDA /* ProtocolContracts.swift */; };
+		F481F1012ACECB7700BD4BDA /* ListingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481F1002ACECB7700BD4BDA /* ListingInteractor.swift */; };
+		F481F1032ACECCDE00BD4BDA /* ListingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481F1022ACECCDE00BD4BDA /* ListingRouter.swift */; };
+		F481F1052ACECD5A00BD4BDA /* ListingConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481F1042ACECD5A00BD4BDA /* ListingConfigs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F46A4A152ACF54BD003E59A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F46A4A102ACF54BC003E59A9 /* NetworkKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F46A49F62ACF54BC003E59A9;
+			remoteInfo = NetworkKit;
+		};
+		F46A4A172ACF54BD003E59A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F46A4A102ACF54BC003E59A9 /* NetworkKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F46A4A002ACF54BC003E59A9;
+			remoteInfo = NetworkKitTests;
+		};
 		F481F0D12ACEC3F500BD4BDA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F481F0B22ACEC3F300BD4BDA /* Project object */;
@@ -35,11 +60,33 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F481F17D2ACEDD0700BD4BDA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F46A4A1A2ACF54E2003E59A9 /* NetworkKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0D60A5BA26687F7DD5080A80 /* Pods-PWCAssignmentProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWCAssignmentProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-PWCAssignmentProjectTests/Pods-PWCAssignmentProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0E85F59776B2A364F630E4C7 /* Pods_PWCAssignmentProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PWCAssignmentProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F311BEF4CBF3E3AF7D30938 /* Pods-PWCAssignmentProject-PWCAssignmentProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWCAssignmentProject-PWCAssignmentProjectUITests.release.xcconfig"; path = "Target Support Files/Pods-PWCAssignmentProject-PWCAssignmentProjectUITests/Pods-PWCAssignmentProject-PWCAssignmentProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2F2471BCBA967F6D75E6A2FE /* Pods-PWCAssignmentProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWCAssignmentProject.release.xcconfig"; path = "Target Support Files/Pods-PWCAssignmentProject/Pods-PWCAssignmentProject.release.xcconfig"; sourceTree = "<group>"; };
+		5134B61B36325A40FD15ED91 /* Pods-PWCAssignmentProject-PWCAssignmentProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWCAssignmentProject-PWCAssignmentProjectUITests.debug.xcconfig"; path = "Target Support Files/Pods-PWCAssignmentProject-PWCAssignmentProjectUITests/Pods-PWCAssignmentProject-PWCAssignmentProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A5389A16794799891445E97E /* Pods-PWCAssignmentProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWCAssignmentProjectTests.release.xcconfig"; path = "Target Support Files/Pods-PWCAssignmentProjectTests/Pods-PWCAssignmentProjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		A963A52257C57D8761C13FD8 /* Pods_PWCAssignmentProject_PWCAssignmentProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PWCAssignmentProject_PWCAssignmentProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACB614BB216D913CB95408E9 /* Pods_PWCAssignmentProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PWCAssignmentProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F46A4A102ACF54BC003E59A9 /* NetworkKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkKit.xcodeproj; path = NetworkKit/NetworkKit.xcodeproj; sourceTree = "<group>"; };
 		F481F0BA2ACEC3F300BD4BDA /* PWCAssignmentProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PWCAssignmentProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F481F0BD2ACEC3F300BD4BDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F481F0BF2ACEC3F300BD4BDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F481F0C12ACEC3F300BD4BDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F481F0C42ACEC3F300BD4BDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F481F0C62ACEC3F500BD4BDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F481F0C92ACEC3F500BD4BDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +96,14 @@
 		F481F0DA2ACEC3F500BD4BDA /* PWCAssignmentProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PWCAssignmentProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F481F0DE2ACEC3F500BD4BDA /* PWCAssignmentProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWCAssignmentProjectUITests.swift; sourceTree = "<group>"; };
 		F481F0E02ACEC3F500BD4BDA /* PWCAssignmentProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWCAssignmentProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F481F0F12ACEC47E00BD4BDA /* UniversityListingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListingVC.swift; sourceTree = "<group>"; };
+		F481F0F32ACEC49E00BD4BDA /* UniversityListingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListingPresenter.swift; sourceTree = "<group>"; };
+		F481F0FB2ACEC6FD00BD4BDA /* UniversityListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListingTableViewCell.swift; sourceTree = "<group>"; };
+		F481F0FE2ACEC75B00BD4BDA /* ProtocolContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolContracts.swift; sourceTree = "<group>"; };
+		F481F1002ACECB7700BD4BDA /* ListingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingInteractor.swift; sourceTree = "<group>"; };
+		F481F1022ACECCDE00BD4BDA /* ListingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingRouter.swift; sourceTree = "<group>"; };
+		F481F1042ACECD5A00BD4BDA /* ListingConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingConfigs.swift; sourceTree = "<group>"; };
+		F893104FAF39F9384F0AA631 /* Pods-PWCAssignmentProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWCAssignmentProject.debug.xcconfig"; path = "Target Support Files/Pods-PWCAssignmentProject/Pods-PWCAssignmentProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +111,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F46A4A192ACF54E2003E59A9 /* NetworkKit.framework in Frameworks */,
+				241DC69947EE0B3A8C46A5E7 /* Pods_PWCAssignmentProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8088E12A55EE7F1B9F6EBFC1 /* Pods_PWCAssignmentProjectTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,19 +128,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B1C4F580DE594D854CEE448 /* Pods_PWCAssignmentProject_PWCAssignmentProjectUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B298C9741283AC099EC3469 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E85F59776B2A364F630E4C7 /* Pods_PWCAssignmentProject.framework */,
+				A963A52257C57D8761C13FD8 /* Pods_PWCAssignmentProject_PWCAssignmentProjectUITests.framework */,
+				ACB614BB216D913CB95408E9 /* Pods_PWCAssignmentProjectTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7326F01C680E4EC158D48EDF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F893104FAF39F9384F0AA631 /* Pods-PWCAssignmentProject.debug.xcconfig */,
+				2F2471BCBA967F6D75E6A2FE /* Pods-PWCAssignmentProject.release.xcconfig */,
+				5134B61B36325A40FD15ED91 /* Pods-PWCAssignmentProject-PWCAssignmentProjectUITests.debug.xcconfig */,
+				1F311BEF4CBF3E3AF7D30938 /* Pods-PWCAssignmentProject-PWCAssignmentProjectUITests.release.xcconfig */,
+				0D60A5BA26687F7DD5080A80 /* Pods-PWCAssignmentProjectTests.debug.xcconfig */,
+				A5389A16794799891445E97E /* Pods-PWCAssignmentProjectTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F46A4A112ACF54BC003E59A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F46A4A162ACF54BD003E59A9 /* NetworkKit.framework */,
+				F46A4A182ACF54BD003E59A9 /* NetworkKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		F481F0B12ACEC3F300BD4BDA = {
 			isa = PBXGroup;
 			children = (
+				F46A4A102ACF54BC003E59A9 /* NetworkKit.xcodeproj */,
 				F481F0BC2ACEC3F300BD4BDA /* PWCAssignmentProject */,
 				F481F0D32ACEC3F500BD4BDA /* PWCAssignmentProjectTests */,
 				F481F0DD2ACEC3F500BD4BDA /* PWCAssignmentProjectUITests */,
 				F481F0BB2ACEC3F300BD4BDA /* Products */,
+				7326F01C680E4EC158D48EDF /* Pods */,
+				0B298C9741283AC099EC3469 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,9 +193,8 @@
 		F481F0BC2ACEC3F300BD4BDA /* PWCAssignmentProject */ = {
 			isa = PBXGroup;
 			children = (
-				F481F0BD2ACEC3F300BD4BDA /* AppDelegate.swift */,
-				F481F0BF2ACEC3F300BD4BDA /* SceneDelegate.swift */,
-				F481F0C12ACEC3F300BD4BDA /* ViewController.swift */,
+				F481F0F92ACEC52600BD4BDA /* Application */,
+				F481F0EE2ACEC40F00BD4BDA /* Modules */,
 				F481F0C32ACEC3F300BD4BDA /* Main.storyboard */,
 				F481F0C62ACEC3F500BD4BDA /* Assets.xcassets */,
 				F481F0C82ACEC3F500BD4BDA /* LaunchScreen.storyboard */,
@@ -127,6 +220,93 @@
 			path = PWCAssignmentProjectUITests;
 			sourceTree = "<group>";
 		};
+		F481F0EE2ACEC40F00BD4BDA /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				F481F0EF2ACEC42100BD4BDA /* UniversityListingModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		F481F0EF2ACEC42100BD4BDA /* UniversityListingModule */ = {
+			isa = PBXGroup;
+			children = (
+				F481F0FD2ACEC72300BD4BDA /* Protocols */,
+				F481F0FA2ACEC5C500BD4BDA /* CustomTableViewCells */,
+				F481F0F82ACEC51500BD4BDA /* Models */,
+				F481F0F72ACEC50A00BD4BDA /* Router */,
+				F481F0F62ACEC4FB00BD4BDA /* Interactor */,
+				F481F0F52ACEC4A700BD4BDA /* Presenters */,
+				F481F0F02ACEC44800BD4BDA /* Controllers */,
+			);
+			path = UniversityListingModule;
+			sourceTree = "<group>";
+		};
+		F481F0F02ACEC44800BD4BDA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F481F0F12ACEC47E00BD4BDA /* UniversityListingVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F481F0F52ACEC4A700BD4BDA /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				F481F0F32ACEC49E00BD4BDA /* UniversityListingPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		F481F0F62ACEC4FB00BD4BDA /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				F481F1002ACECB7700BD4BDA /* ListingInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		F481F0F72ACEC50A00BD4BDA /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				F481F1022ACECCDE00BD4BDA /* ListingRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		F481F0F82ACEC51500BD4BDA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F481F1042ACECD5A00BD4BDA /* ListingConfigs.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F481F0F92ACEC52600BD4BDA /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F481F0BF2ACEC3F300BD4BDA /* SceneDelegate.swift */,
+				F481F0BD2ACEC3F300BD4BDA /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F481F0FA2ACEC5C500BD4BDA /* CustomTableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				F481F0FB2ACEC6FD00BD4BDA /* UniversityListingTableViewCell.swift */,
+			);
+			path = CustomTableViewCells;
+			sourceTree = "<group>";
+		};
+		F481F0FD2ACEC72300BD4BDA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F481F0FE2ACEC75B00BD4BDA /* ProtocolContracts.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +314,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F481F0E42ACEC3F500BD4BDA /* Build configuration list for PBXNativeTarget "PWCAssignmentProject" */;
 			buildPhases = (
+				54259A25CAEEF092972324D5 /* [CP] Check Pods Manifest.lock */,
 				F481F0B62ACEC3F300BD4BDA /* Sources */,
 				F481F0B72ACEC3F300BD4BDA /* Frameworks */,
 				F481F0B82ACEC3F300BD4BDA /* Resources */,
+				B1264EAB2B7D4E4BE2ABE4CF /* [CP] Embed Pods Frameworks */,
+				F481F17D2ACEDD0700BD4BDA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +334,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F481F0E72ACEC3F500BD4BDA /* Build configuration list for PBXNativeTarget "PWCAssignmentProjectTests" */;
 			buildPhases = (
+				3DBFE8C3C577CA276CC59BD0 /* [CP] Check Pods Manifest.lock */,
 				F481F0CC2ACEC3F500BD4BDA /* Sources */,
 				F481F0CD2ACEC3F500BD4BDA /* Frameworks */,
 				F481F0CE2ACEC3F500BD4BDA /* Resources */,
@@ -169,9 +353,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F481F0EA2ACEC3F500BD4BDA /* Build configuration list for PBXNativeTarget "PWCAssignmentProjectUITests" */;
 			buildPhases = (
+				DBA80E8CBDC997DE920056C5 /* [CP] Check Pods Manifest.lock */,
 				F481F0D62ACEC3F500BD4BDA /* Sources */,
 				F481F0D72ACEC3F500BD4BDA /* Frameworks */,
 				F481F0D82ACEC3F500BD4BDA /* Resources */,
+				ECD68D24C3B3AB6502C15D5A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,6 +403,12 @@
 			mainGroup = F481F0B12ACEC3F300BD4BDA;
 			productRefGroup = F481F0BB2ACEC3F300BD4BDA /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F46A4A112ACF54BC003E59A9 /* Products */;
+					ProjectRef = F46A4A102ACF54BC003E59A9 /* NetworkKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F481F0B92ACEC3F300BD4BDA /* PWCAssignmentProject */,
@@ -225,6 +417,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F46A4A162ACF54BD003E59A9 /* NetworkKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = NetworkKit.framework;
+			remoteRef = F46A4A152ACF54BD003E59A9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F46A4A182ACF54BD003E59A9 /* NetworkKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = NetworkKitTests.xctest;
+			remoteRef = F46A4A172ACF54BD003E59A9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F481F0B82ACEC3F300BD4BDA /* Resources */ = {
@@ -253,13 +462,122 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3DBFE8C3C577CA276CC59BD0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PWCAssignmentProjectTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54259A25CAEEF092972324D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PWCAssignmentProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1264EAB2B7D4E4BE2ABE4CF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PWCAssignmentProject/Pods-PWCAssignmentProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PWCAssignmentProject/Pods-PWCAssignmentProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PWCAssignmentProject/Pods-PWCAssignmentProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBA80E8CBDC997DE920056C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PWCAssignmentProject-PWCAssignmentProjectUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECD68D24C3B3AB6502C15D5A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PWCAssignmentProject-PWCAssignmentProjectUITests/Pods-PWCAssignmentProject-PWCAssignmentProjectUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PWCAssignmentProject-PWCAssignmentProjectUITests/Pods-PWCAssignmentProject-PWCAssignmentProjectUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PWCAssignmentProject-PWCAssignmentProjectUITests/Pods-PWCAssignmentProject-PWCAssignmentProjectUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F481F0B62ACEC3F300BD4BDA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F481F0C22ACEC3F300BD4BDA /* ViewController.swift in Sources */,
+				F481F0F22ACEC47E00BD4BDA /* UniversityListingVC.swift in Sources */,
+				F481F1032ACECCDE00BD4BDA /* ListingRouter.swift in Sources */,
+				F481F0FF2ACEC75B00BD4BDA /* ProtocolContracts.swift in Sources */,
+				F481F1052ACECD5A00BD4BDA /* ListingConfigs.swift in Sources */,
 				F481F0BE2ACEC3F300BD4BDA /* AppDelegate.swift in Sources */,
+				F481F0F42ACEC49E00BD4BDA /* UniversityListingPresenter.swift in Sources */,
+				F481F1012ACECB7700BD4BDA /* ListingInteractor.swift in Sources */,
+				F481F0FC2ACEC6FD00BD4BDA /* UniversityListingTableViewCell.swift in Sources */,
 				F481F0C02ACEC3F300BD4BDA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +750,7 @@
 		};
 		F481F0E52ACEC3F500BD4BDA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F893104FAF39F9384F0AA631 /* Pods-PWCAssignmentProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -460,6 +779,7 @@
 		};
 		F481F0E62ACEC3F500BD4BDA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F2471BCBA967F6D75E6A2FE /* Pods-PWCAssignmentProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -488,6 +808,7 @@
 		};
 		F481F0E82ACEC3F500BD4BDA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D60A5BA26687F7DD5080A80 /* Pods-PWCAssignmentProjectTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +829,7 @@
 		};
 		F481F0E92ACEC3F500BD4BDA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5389A16794799891445E97E /* Pods-PWCAssignmentProjectTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -528,6 +850,7 @@
 		};
 		F481F0EB2ACEC3F500BD4BDA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5134B61B36325A40FD15ED91 /* Pods-PWCAssignmentProject-PWCAssignmentProjectUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -546,6 +869,7 @@
 		};
 		F481F0EC2ACEC3F500BD4BDA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F311BEF4CBF3E3AF7D30938 /* Pods-PWCAssignmentProject-PWCAssignmentProjectUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

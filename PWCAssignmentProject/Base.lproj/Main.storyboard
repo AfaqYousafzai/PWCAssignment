@@ -1,24 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--University ListingVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UniversityListingVC" id="BYZ-38-t0r" customClass="UniversityListingVC" customModule="PWCAssignmentProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RH2-UL-7f4">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UniversityListingTableViewCell" rowHeight="100" id="jLV-Z7-yq7" customClass="UniversityListingTableViewCell" customModule="PWCAssignmentProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jLV-Z7-yq7" id="bHn-lU-CGs">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdb-2P-KhI">
+                                                    <rect key="frame" x="32" y="19" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7E-P2-2j1">
+                                                    <rect key="frame" x="32" y="60" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="O7E-P2-2j1" firstAttribute="top" secondItem="mdb-2P-KhI" secondAttribute="bottom" constant="20" id="5YY-4S-iSx"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mdb-2P-KhI" secondAttribute="trailing" constant="20" symbolic="YES" id="ImR-1a-a0I"/>
+                                                <constraint firstItem="mdb-2P-KhI" firstAttribute="top" secondItem="bHn-lU-CGs" secondAttribute="topMargin" constant="8" id="d0H-RU-DG1"/>
+                                                <constraint firstItem="mdb-2P-KhI" firstAttribute="leading" secondItem="bHn-lU-CGs" secondAttribute="leadingMargin" constant="12" id="hfI-wP-WLy"/>
+                                                <constraint firstItem="O7E-P2-2j1" firstAttribute="leading" secondItem="bHn-lU-CGs" secondAttribute="leadingMargin" constant="12" id="saL-Xn-uHG"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="O7E-P2-2j1" secondAttribute="trailing" constant="20" symbolic="YES" id="y1n-ee-TTp"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="O7E-P2-2j1" secondAttribute="bottom" constant="8" id="zpZ-mm-xIK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="mdb-2P-KhI" id="N5U-ay-lEt"/>
+                                            <outlet property="stateLabel" destination="O7E-P2-2j1" id="kuJ-Q3-CfQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="vzD-bt-Ly0"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="qRQ-ab-aBF"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RH2-UL-7f4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5ye-EU-fIH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RH2-UL-7f4" secondAttribute="bottom" id="Q1c-Ux-jJ8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RH2-UL-7f4" secondAttribute="trailing" id="gan-R4-9PD"/>
+                            <constraint firstItem="RH2-UL-7f4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oBa-XI-FM8"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="universityTableView" destination="RH2-UL-7f4" id="oaf-Qz-uLi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="41.984732824427482" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
