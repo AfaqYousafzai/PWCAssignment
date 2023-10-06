@@ -29,6 +29,8 @@ protocol ViewToPresenterListingProtocol: AnyObject {
 
     func viewDidLoad(url: makeURL)
     
+    func viewDidLoadFromDb()
+    
     func refresh()
 }
 
@@ -39,6 +41,7 @@ protocol PresenterToInteractorListingProtocol: AnyObject {
     var presenter: InteractorToPresenterListingProtocol? { get set }
     
     func loadListing(url: makeURL)
+    func loadListingFromDb()
 }
 
 

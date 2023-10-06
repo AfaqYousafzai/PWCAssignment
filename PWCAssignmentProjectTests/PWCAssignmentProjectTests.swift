@@ -7,30 +7,105 @@
 
 import XCTest
 @testable import PWCAssignmentProject
+@testable import NetworkKit
 
-final class PWCAssignmentProjectTests: XCTestCase {
+class YourTestCase: XCTestCase {
+    var webService: WebServiceProtocol!
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    override func setUp() {
+        super.setUp()
+        webService = MockWebService()
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+    func testWebServiceSuccess() {
+        let expectation = XCTestExpectation(description: "Network request should succeed")
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        // Set up your request parameters
+        let url = makeURL.getList
+        let request = ListRequest()
+        
+        // Set the desired result for success
+        let mockWebService = webService as! MockWebService
+        mockWebService.result = .success(Data()) // You can provide the desired success data here
+        
+        webService.callWebService(url: url, request: request) { result, code in
+            switch result {
+            case .success(let data):
+                XCTAssertNotNil(data)
+                XCTAssertEqual(code, 200)
+            case .failure(_):
+                XCTFail("Expected success, but got failure")
+            }
+            expectation.fulfill()
         }
+
+        wait(for: [expectation], timeout: 5.0)
+    }
+    
+    func testWebServiceNoInternet() {
+        let expectation = XCTestExpectation(description: "Network request should fail due to no internet")
+
+        // Set up your request parameters
+        let url = makeURL.getList
+        let request = ListRequest()
+        
+        // Set the flag to simulate no internet
+        let mockWebService = webService as! MockWebService
+        if PWCAssignmentProjectGeneralElements.shared.internetConnectivity == .unavailable {
+            mockWebService.simulateNoInternet = true
+        } else {
+            mockWebService.simulateNoInternet = false
+        }
+        
+        
+        webService.callWebService(url: url, request: request) { result, code in
+            switch result {
+            case .success(_):
+                XCTFail("Expected failure, but got success")
+            case .failure(let error as NSError) where error.code == URLError.notConnectedToInternet.rawValue:
+                XCTAssertEqual(code, URLError.notConnectedToInternet.rawValue)
+            default:
+                XCTFail("Expected failure due to no internet")
+            }
+            expectation.fulfill()
+        }
+
+        wait(for: [expectation], timeout: 5.0)
     }
 
 }
+
+protocol WebServiceProtocol {
+    func callWebService(
+        url: makeURL,
+        request: BaseRequest,
+        completion: @escaping (_ result: Result<Data, Error>, _ code: Int) -> Void
+    )
+}
+
+class MockWebService: WebServiceProtocol {
+    var result: Result<Data, Error> = .success(Data()) // Default to success for convenience
+    var simulateNoInternet = false // Add a flag to simulate no internet
+    
+    func callWebService(
+        url: makeURL,
+        request: BaseRequest,
+        completion: @escaping (Result<Data, Error>, Int) -> Void
+    ) {
+        if simulateNoInternet {
+            // Simulate no internet connection
+            let error = NSError(domain: NSURLErrorDomain, code: URLError.notConnectedToInternet.rawValue, userInfo: nil)
+            completion(.failure(error), URLError.notConnectedToInternet.rawValue)
+            return
+        }
+
+        // Simulate network request by returning the stored result
+        switch result {
+        case .success(let data):
+            completion(.success(data), 200)
+        case .failure(let error):
+            completion(.failure(error), 500)
+        }
+    }
+}
+

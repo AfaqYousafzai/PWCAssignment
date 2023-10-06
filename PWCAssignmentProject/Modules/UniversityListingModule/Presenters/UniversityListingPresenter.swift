@@ -24,6 +24,12 @@ class ListPresenter: ViewToPresenterListingProtocol {
         interactor?.loadListing(url: url)
     }
     
+    func viewDidLoadFromDb() {
+        print("Presenter is being notified that the View was loaded.")
+        view?.showHUD()
+        interactor?.loadListingFromDb()
+    }
+    
     func refresh() {
         print("Presenter is being notified that the View was refreshed.")
     }

@@ -10,6 +10,7 @@ import Alamofire
 
 public enum makeURL {
     case getList
+    case noList
     
     public func getURl() -> String {
         var url: String = ""
@@ -17,6 +18,8 @@ public enum makeURL {
         switch self {
         case .getList:
             return "search?country=Pakistan"
+        case .noList:
+            return "goAndGetErro"
         }
         
     }

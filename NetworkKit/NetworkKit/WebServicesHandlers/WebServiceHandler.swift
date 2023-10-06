@@ -21,7 +21,7 @@ public class WebServiceHandler {
             PWCAssignmentProjectGeneralElements.showAlertWithMessage("No Internet Connection", sender: nil)
             return
         }
-                
+        
         let headers: HTTPHeaders = [
             "Content-Type": "application/json",
         ]
@@ -34,7 +34,7 @@ public class WebServiceHandler {
             parameterEncoding = JSONEncoding.default
         }
         else {
-           
+            
             parameterEncoding = URLEncoding.default
         }
         

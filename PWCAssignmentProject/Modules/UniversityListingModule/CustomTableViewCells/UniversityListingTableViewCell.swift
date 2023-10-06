@@ -19,7 +19,7 @@ class UniversityListingTableViewCell: UITableViewCell {
 
     func set(content: ListingConfigs) {
         nameLabel.text = content.name
-        stateLabel.text = content.stateProvince?.rawValue
+        stateLabel.text = content.stateProvince
     }
 
 }

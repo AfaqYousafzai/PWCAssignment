@@ -8,6 +8,7 @@
 import UIKit
 import PKHUD
 import NetworkKit
+import RealmSwift
 
 class UniversityListingVC: UIViewController {
     
@@ -15,7 +16,8 @@ class UniversityListingVC: UIViewController {
     
     // MARK: - Properties
     var presenter: ViewToPresenterListingProtocol?
-    var listingConfigs: listingConfigurations?
+    //var listingConfigs: [ListingConfigs]?
+    var listingConfigsArray: [ListingConfigs] = []
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.attributedTitle = NSAttributedString(string: "Refreshing")
@@ -39,24 +41,28 @@ class UniversityListingVC: UIViewController {
     }
     
     func initialSettings() {
-        if listingConfigs == nil {
+        //checking for internet reachability
+        if PWCAssignmentProjectGeneralElements.shared.internetConnectivity == .unavailable || listingConfigsArray.count > 0 {
+            presenter?.viewDidLoadFromDb()
+        } else {
             presenter?.viewDidLoad(url: .getList)
         }
     }
     
     // MARK: - Actions
     @objc func refresh() {
+        self.universityTableView.reloadData()
         presenter?.refresh()
+        initialSettings()
     }
-
-    
 }
 
 extension UniversityListingVC: PresenterToViewListingProtocol{
     
     func onFetchListingSuccess(items: listingConfigurations) {
         print("View receives the response from Presenter and updates itself.")
-        listingConfigs = items
+        self.refreshControl.endRefreshing()
+        listingConfigsArray = items
         self.universityTableView.reloadData()
     }
     
@@ -78,16 +84,15 @@ extension UniversityListingVC: PresenterToViewListingProtocol{
 
 extension UniversityListingVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        listingConfigs?.count ?? 0
+        return listingConfigsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: UniversityListingTableViewCell.self), for: indexPath) as? UniversityListingTableViewCell else {
             preconditionFailure()
         }
-        if let list = listingConfigs?[indexPath.item] {
-            cell.set(content: list)
-        }
+        let list = listingConfigsArray[indexPath.item]
+        cell.set(content: list)
         return cell
     }
 }
