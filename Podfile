@@ -16,8 +16,6 @@ target 'PWCAssignmentProject' do
 
 
   target 'PWCAssignmentProjectTests' do
-    
-    pod 'RealmSwift'
     inherit! :search_paths
     # Pods for testing
   end
@@ -37,7 +35,6 @@ target 'NetworkKit' do
   project 'NetworkKit/NetworkKit.xcodeproj'
   pod 'PKHUD'
   pod 'Alamofire'
-  pod 'RealmSwift'
   inherit! :search_paths
 end
 
