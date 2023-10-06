@@ -17,7 +17,7 @@ class ListingInteractor: PresenterToInteractorListingProtocol {
     var items: [ListingConfigs] = []
     
     func loadListing(url: makeURL) {
-        print("Interactor receives the request from Presenter to load quotes from the server.")
+        print("Interactor receives the request from Presenter to load universities from the server.")
         
         WebServiceHandler.callWebService(url: url, request: ListRequest()){ response, error, code in
             
@@ -65,7 +65,7 @@ class ListingInteractor: PresenterToInteractorListingProtocol {
     
     
     func loadListingFromDb() {
-        print("Interactor receives the request from Presenter to load quotes from the server.")
+        print("Interactor receives the request from Presenter to load universities from the server.")
         do
         {
             let realm = try! Realm()

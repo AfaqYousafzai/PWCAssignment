@@ -20,13 +20,11 @@ class YourTestCase: XCTestCase {
     func testWebServiceSuccess() {
         let expectation = XCTestExpectation(description: "Network request should succeed")
 
-        // Set up your request parameters
         let url = makeURL.getList
         let request = ListRequest()
         
-        // Set the desired result for success
         let mockWebService = webService as! MockWebService
-        mockWebService.result = .success(Data()) // You can provide the desired success data here
+        mockWebService.result = .success(Data())
         
         webService.callWebService(url: url, request: request) { result, code in
             switch result {
@@ -49,8 +47,8 @@ class YourTestCase: XCTestCase {
         let url = makeURL.getList
         let request = ListRequest()
         
-        // Set the flag to simulate no internet
         let mockWebService = webService as! MockWebService
+        // flag to simulate no internet connection
         if PWCAssignmentProjectGeneralElements.shared.internetConnectivity == .unavailable {
             mockWebService.simulateNoInternet = true
         } else {
@@ -85,7 +83,9 @@ protocol WebServiceProtocol {
 
 class MockWebService: WebServiceProtocol {
     var result: Result<Data, Error> = .success(Data()) // Default to success for convenience
-    var simulateNoInternet = false // Add a flag to simulate no internet
+   
+    // flag for analysing internet availablity
+    var simulateNoInternet = false
     
     func callWebService(
         url: makeURL,

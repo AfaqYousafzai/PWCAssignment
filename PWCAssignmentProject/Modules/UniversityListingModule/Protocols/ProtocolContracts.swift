@@ -58,4 +58,6 @@ protocol InteractorToPresenterListingProtocol: AnyObject {
 protocol PresenterToRouterListingProtocol: AnyObject {
     
     static func createModule() -> UINavigationController
+    
+    static func createDetails(detailObject: ListingConfigs, vc: UIViewController)
 }

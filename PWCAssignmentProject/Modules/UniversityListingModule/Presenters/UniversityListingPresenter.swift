@@ -57,7 +57,7 @@ extension ListPresenter: InteractorToPresenterListingProtocol {
     func fetchListingFailure(errorCode: Int) {
         print("Presenter receives the result from Interactor after it's done its job.")
         view?.hideHUD()
-        view?.onFetchListingFailure(error: "Couldn't fetch quotes: \(errorCode)")
+        view?.onFetchListingFailure(error: "Couldn't fetch data: \(errorCode)")
     }
     
     

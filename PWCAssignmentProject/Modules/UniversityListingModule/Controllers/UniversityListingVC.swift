@@ -10,7 +10,7 @@ import PKHUD
 import NetworkKit
 import RealmSwift
 
-class UniversityListingVC: UIViewController {
+class UniversityListingVC: UIViewController, UniversityDetailViewControllerDelegate {
     
     @IBOutlet weak var universityTableView: UITableView!
     
@@ -55,6 +55,10 @@ class UniversityListingVC: UIViewController {
         presenter?.refresh()
         initialSettings()
     }
+    
+    func universityDetailViewControllerDidRequestRefresh() {
+        self.refresh()
+    }
 }
 
 extension UniversityListingVC: PresenterToViewListingProtocol{
@@ -95,6 +99,11 @@ extension UniversityListingVC: UITableViewDataSource {
         cell.set(content: list)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailObject = listingConfigsArray[indexPath.row]
+        ListingRouter.createDetails(detailObject: detailObject, vc: self)
+    }
 }
 
 extension UniversityListingVC: UITableViewDelegate {
@@ -116,7 +125,7 @@ extension UniversityListingVC {
         let presenter: ViewToPresenterListingProtocol & InteractorToPresenterListingProtocol = ListPresenter()
         
         self.presenter = presenter
-        self.presenter?.router = ListingRouter()
+        self.presenter?.router = ListingRouter(navigationController: self.navigationController ?? UINavigationController())
         self.presenter?.view = self
         self.presenter?.interactor = ListingInteractor()
         self.presenter?.interactor?.presenter = presenter

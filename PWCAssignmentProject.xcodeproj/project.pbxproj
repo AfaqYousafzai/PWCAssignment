@@ -10,6 +10,10 @@
 		241DC69947EE0B3A8C46A5E7 /* Pods_PWCAssignmentProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E85F59776B2A364F630E4C7 /* Pods_PWCAssignmentProject.framework */; };
 		8088E12A55EE7F1B9F6EBFC1 /* Pods_PWCAssignmentProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB614BB216D913CB95408E9 /* Pods_PWCAssignmentProjectTests.framework */; };
 		9B1C4F580DE594D854CEE448 /* Pods_PWCAssignmentProject_PWCAssignmentProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A963A52257C57D8761C13FD8 /* Pods_PWCAssignmentProject_PWCAssignmentProjectUITests.framework */; };
+		F461E09A2AD07FEB00F0BC38 /* UniversityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F461E0992AD07FEB00F0BC38 /* UniversityDetailViewController.swift */; };
+		F461E09E2AD0805500F0BC38 /* UniversityDetailPresenterImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F461E09D2AD0805500F0BC38 /* UniversityDetailPresenterImplementation.swift */; };
+		F461E0A12AD0809100F0BC38 /* UniversityDetailInteractorImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F461E0A02AD0809100F0BC38 /* UniversityDetailInteractorImplementation.swift */; };
+		F461E0A42AD080C900F0BC38 /* UniversityDetailRouterImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F461E0A32AD080C900F0BC38 /* UniversityDetailRouterImplementation.swift */; };
 		F46A4A192ACF54E2003E59A9 /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F46A4A162ACF54BD003E59A9 /* NetworkKit.framework */; };
 		F46A4A1A2ACF54E2003E59A9 /* NetworkKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F46A4A162ACF54BD003E59A9 /* NetworkKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F481F0BE2ACEC3F300BD4BDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F481F0BD2ACEC3F300BD4BDA /* AppDelegate.swift */; };
@@ -83,6 +87,10 @@
 		A5389A16794799891445E97E /* Pods-PWCAssignmentProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PWCAssignmentProjectTests.release.xcconfig"; path = "Target Support Files/Pods-PWCAssignmentProjectTests/Pods-PWCAssignmentProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		A963A52257C57D8761C13FD8 /* Pods_PWCAssignmentProject_PWCAssignmentProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PWCAssignmentProject_PWCAssignmentProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB614BB216D913CB95408E9 /* Pods_PWCAssignmentProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PWCAssignmentProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F461E0992AD07FEB00F0BC38 /* UniversityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityDetailViewController.swift; sourceTree = "<group>"; };
+		F461E09D2AD0805500F0BC38 /* UniversityDetailPresenterImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityDetailPresenterImplementation.swift; sourceTree = "<group>"; };
+		F461E0A02AD0809100F0BC38 /* UniversityDetailInteractorImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityDetailInteractorImplementation.swift; sourceTree = "<group>"; };
+		F461E0A32AD080C900F0BC38 /* UniversityDetailRouterImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityDetailRouterImplementation.swift; sourceTree = "<group>"; };
 		F46A4A102ACF54BC003E59A9 /* NetworkKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkKit.xcodeproj; path = NetworkKit/NetworkKit.xcodeproj; sourceTree = "<group>"; };
 		F481F0BA2ACEC3F300BD4BDA /* PWCAssignmentProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PWCAssignmentProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F481F0BD2ACEC3F300BD4BDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +166,49 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F461E0962AD07FBA00F0BC38 /* UniversityDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F461E0A22AD080A500F0BC38 /* Router */,
+				F461E09F2AD0806D00F0BC38 /* Interactor */,
+				F461E09C2AD0803500F0BC38 /* Presenter */,
+				F461E09B2AD0802800F0BC38 /* Controller */,
+			);
+			path = UniversityDetail;
+			sourceTree = "<group>";
+		};
+		F461E09B2AD0802800F0BC38 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F461E0992AD07FEB00F0BC38 /* UniversityDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F461E09C2AD0803500F0BC38 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				F461E09D2AD0805500F0BC38 /* UniversityDetailPresenterImplementation.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		F461E09F2AD0806D00F0BC38 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				F461E0A02AD0809100F0BC38 /* UniversityDetailInteractorImplementation.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		F461E0A22AD080A500F0BC38 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				F461E0A32AD080C900F0BC38 /* UniversityDetailRouterImplementation.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		F46A4A112ACF54BC003E59A9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +274,7 @@
 		F481F0EE2ACEC40F00BD4BDA /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				F461E0962AD07FBA00F0BC38 /* UniversityDetail */,
 				F481F0EF2ACEC42100BD4BDA /* UniversityListingModule */,
 			);
 			path = Modules;
@@ -588,15 +640,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F461E09E2AD0805500F0BC38 /* UniversityDetailPresenterImplementation.swift in Sources */,
 				F481F0F22ACEC47E00BD4BDA /* UniversityListingVC.swift in Sources */,
 				F481F1032ACECCDE00BD4BDA /* ListingRouter.swift in Sources */,
 				F481F0FF2ACEC75B00BD4BDA /* ProtocolContracts.swift in Sources */,
 				F481F1052ACECD5A00BD4BDA /* ListingConfigs.swift in Sources */,
 				F481F0BE2ACEC3F300BD4BDA /* AppDelegate.swift in Sources */,
 				F481F0F42ACEC49E00BD4BDA /* UniversityListingPresenter.swift in Sources */,
+				F461E0A12AD0809100F0BC38 /* UniversityDetailInteractorImplementation.swift in Sources */,
 				F481F1012ACECB7700BD4BDA /* ListingInteractor.swift in Sources */,
+				F461E0A42AD080C900F0BC38 /* UniversityDetailRouterImplementation.swift in Sources */,
 				F481F0FC2ACEC6FD00BD4BDA /* UniversityListingTableViewCell.swift in Sources */,
 				F481F0C02ACEC3F300BD4BDA /* SceneDelegate.swift in Sources */,
+				F461E09A2AD07FEB00F0BC38 /* UniversityDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
